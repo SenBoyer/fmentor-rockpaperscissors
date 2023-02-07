@@ -29,11 +29,11 @@ const stage = [GameStart, GamePlay];
   @apply text-center relative sm:block flex flex-col items-center;
 
   .arena {
-    @apply relative sm:h-full flex sm:items-center justify-center sm:p-0 pt-20;
+    @apply relative sm:h-full flex sm:items-center justify-center sm:p-0 pt-0;
   }
 
   :deep(.rules-btn) {
-    @apply absolute bottom-0 sm:right-0 right-auto bottom-[-20];
+    @apply absolute bottom-0 sm:right-0 right-auto bottom-[-50px];
   }
 }
 </style>
