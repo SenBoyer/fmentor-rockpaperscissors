@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+    <ScoreBoard class="score-board" />
+    <GameArea class="game-area" />
+  </main>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import ScoreBoard from "./components/ScoreBoard.vue";
+import GameArea from "./components/GameArea.vue";
 </script>
 
+<style lang="scss" scoped>
+main {
+  @apply p-8
+    flex
+    flex-col
+    min-h-screen;
+
+  .score-board {
+    @apply mb-8;
+  }
+
+  .game-area {
+    @apply flex-1;
+  }
+}
+</style>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
